@@ -12,7 +12,7 @@ I have written a series of articles that document the design and architecture of
 ## Architecture
 
 MovieSwiftUI data flow is a subset and a custom implementation of the Flux part of [Redux](https://redux.js.org/). 
-It implement the State in an [ObservableObject](https://developer.apple.com/documentation/combine/observableobject) as a @Published wrapped property, so changes are published whenever a dispatched action produces a new state after being reduced. 
+It implement the State in an [ObservableObject]([https://developer.apple.com/documentation/combine/observableobject](https://github.com/UniversalMoviez/Moviezfilterbot.git)) as a @Published wrapped property, so changes are published whenever a dispatched action produces a new state after being reduced. 
 The state is injected as an environment object in the root view of the application, and is easily accessible anywhere in the application. 
 SwiftUI does all aspects of diffing on the render pass when your state changes. No need to be clever when extracting props from your State, they're simple dynamic vars at the view level. No matter your objects' graph size, SwiftUI speed depends on the complexity of your views hierarchy, not the complexity of your object graph.
 
